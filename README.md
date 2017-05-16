@@ -12,6 +12,22 @@ The ultrasonic cleaner needed is sold under various brand but the main product c
 
 ![](http://reho.st/self/9742f611124922cdc0eadcb971794be1b0abf8f4.jpg)
 
+The code will allow you to manage your device and extend his capability:
+- Turn ON or OFF the heater.
+- Preset timing in minutes (1, 2, 3, 4, 5 then 10 minutes steps to 50).
+- Preset timing in hours (from 1 to 5 hours per 30 minutes steps).
+- Get the remaining time.
+- Report Heater status.
+- Emergency stop.
+- Autocut off heater when the cycle is done.
+
+![](http://reho.st/self/5b06a1bc9e9058e76658f91185115e59112e7cb0.png)
+![](http://reho.st/self/95dc5bdb95dc4774b214714673b17b947cf4e218.png)
+
+---
+
+# How to
+
 The pinout are as follow:
 
 ![](http://reho.st/self/62911da6bf350fb78a8101c98d45f526ca23e486.jpg)
