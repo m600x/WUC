@@ -21,8 +21,8 @@ The code will allow you to manage your device and extend his capability:
 - Emergency stop.
 - Autocut off heater when the cycle is done.
 
-![](http://reho.st/self/5b06a1bc9e9058e76658f91185115e59112e7cb0.png)
-![](http://reho.st/self/95dc5bdb95dc4774b214714673b17b947cf4e218.png)
+![](http://reho.st/self/0a39a6403b0e4de5749dde192d3f3daf27b7f040.png)
+![](http://reho.st/self/8076e88cd1343308d99671e6cc34a4074ed78083.png)
 
 ---
 
