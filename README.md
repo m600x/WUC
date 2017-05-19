@@ -15,18 +15,21 @@ The ultrasonic cleaner needed is sold under various brand but the main product c
 The code will allow you to manage your device and extend his capability:
 - Turn ON or OFF the heater.
 - Preset timing in minutes (1, 2, 3, 4, 5 then 10 minutes steps to 50).
-- Preset timing in hours (from 1 to 5 hours per 30 minutes steps).
+- Preset timing in hours (from 1 to 10 hours).
+- Custom timing from 1 minutes to 7 days
 - Get the remaining time.
 - Report Heater status.
 - Emergency stop.
 - Autocut off heater when the cycle is done.
 
-![](http://reho.st/self/0a39a6403b0e4de5749dde192d3f3daf27b7f040.png)
-![](http://reho.st/self/8076e88cd1343308d99671e6cc34a4074ed78083.png)
+![](http://reho.st/self/1f3853ab9b72d726027aae9cff634eacb30264e5.png)
+![](http://reho.st/self/e43d74e60541deff48161957b01d9095c0da6b13.png)
 
 ---
 
 # How to
+
+Remember to change the `SSID` and `PASSWORD` to yours in the code.
 
 The pinout are as follow:
 
