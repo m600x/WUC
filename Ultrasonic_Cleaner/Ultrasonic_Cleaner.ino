@@ -111,10 +111,33 @@ void normal()
 	webPage += "<a href=\"420\"><button>7 hours</button></a> ";
 	webPage += "<a href=\"480\"><button>8 hours</button></a> ";
 	webPage += "<a href=\"540\"><button>9 hours</button></a> ";
-	webPage += "<a href=\"600\"><button>10 hours</button></a> ";
-	webPage += "</div>&nbsp;<hr /><p style=\"text-align: center;\">";
+	webPage += "<a href=\"600\"><button>10 hours</button></a>";
+	webPage += "<p></p><h3>Custom time (in minutes) [from 1 to 10080 (a week)] :</h3>";
+	webPage += "<script type=\"text/javascript\">";
+	webPage += "function isNumberKey(evt){";
+	webPage += "var charCode = (evt.which) ? evt.which : event.keyCode";
+	webPage += "if (charCode > 31 && (charCode < 48 || charCode > 57))";
+	webPage += "return false;";
+	webPage += "return true;";
+	webPage += "}";
+	webPage += "</script>";
+	webPage += "<form method='POST' action='/custom'>";
+	webPage += "<input name=\"customtime\" type=\"number\" onkeypress=\"return isNumberKey(event)\"/> ";
+	webPage += "<input type=submit name=x value=Enter />";
+	webPage += "</form>";
+	webPage += "</div>";
+	webPage += "&nbsp;<hr /><p style=\"text-align: center;\">";
 	webPage += "<a href=\"https://github.com/m600x/WUC\">Source Code</a></p>";
 	server.send(200, "text/html", webPage);
+}
+
+void custom_time()
+{
+	server.sendHeader("Location", String("/"), true);
+	server.send(302, "text/plain", "");
+	int customtime = server.arg("customtime").toInt();
+	if (customtime > 0 && customtime < 10081)
+		dispatcher(customtime, 0, 0);
 }
 
 void dispatcher(int cltime, int heat, int stop)
@@ -143,6 +166,7 @@ void dispatcher(int cltime, int heat, int stop)
 void setserver()
 {
 	server.on("/", [](){ bool_running ? busy() : normal();;});
+	server.on("/custom", [](){ custom_time();});
 	server.on("/heat", [](){ dispatcher(0, 1, 0);});
 	server.on("/stop", [](){ dispatcher(0, 0, 1);});
 	server.on("/1", [](){ dispatcher(1, 0, 0);});
